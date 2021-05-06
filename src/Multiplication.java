@@ -31,15 +31,22 @@ public class Multiplication {
 		int y = input.nextInt();
 
 		// print result
-		double result = multiply(x, y);
+		int result = multiply(x, y);
 		System.out.println("Result is: " + result);
 
 	}
 
-	public static double multiply(int x, int y) {
+	/**
+	 * multiplication method
+	 * 
+	 * @param x
+	 * @param y
+	 * @return result
+	 */
+	public static int multiply(int x, int y) {
 
 		if (y > 1) {
-			return x + multiply(x, --y); // 3* 3 = 9 // 3 +3 + 3
+			return x + multiply(x, --y); // 3* 3 = 9 // 3 + 3 + 3
 		} else {
 			return x; // 3 * 1 = 3
 		}
